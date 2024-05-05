@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import localFont from 'next/font/local'
+import Footer from "./components/Footer.tsx"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const chop = localFont({ src: './fonts/Chopsic.otf', variable: '--font-chop', })
@@ -31,7 +32,7 @@ export default function RootLayout({
           </div>
           
         </div>
-        
+        <Footer />
       </body>
     </html>
   );

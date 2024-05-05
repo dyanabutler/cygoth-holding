@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import Button from "./components/Button.tsx"
+import Footer from "./components/Footer.tsx"
 
 export default function Home() {
   return (
@@ -23,6 +24,8 @@ export default function Home() {
         
         <Button link="https://discord.gg/5yydr8Hd" label="Discord Invite Link" actionLabel="Become an OG in the Discord " />
       </div>
+     
     </div>
+   
   )
 }
