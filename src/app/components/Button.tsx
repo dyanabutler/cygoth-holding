@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 
 // Define a type for the props expected by the Button component
@@ -9,8 +10,8 @@ type ButtonProps = {
 
 const Button: React.FC<ButtonProps> = ({ 
   link, 
-  label = "Labs Release 2021.09",  // Set default values here
-  actionLabel = "See what's new →" 
+  label = "",  // Set default values here
+  actionLabel = "" 
 }) => {
   return (
     <div className="grid p-4 gap-8 items-start justify-center">

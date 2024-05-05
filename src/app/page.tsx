@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-import Button from "./components/Button.tsx"
-import Footer from "./components/Footer.tsx"
+import Button from "./components/Buttonnp"
+
 
 export default function Home() {
   return (
