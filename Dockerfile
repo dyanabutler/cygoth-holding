@@ -4,7 +4,6 @@ FROM node:16-alpine
 
 # Set the working directory in the container
 WORKDIR /src
-EXPOSE 8080
 
 # Copy the package.json and package-lock.json (or yarn.lock) files
 COPY package*.json ./
@@ -21,13 +20,13 @@ COPY . .
 
 # Build the application
 RUN npm run build
-# If you're using yarn, use the following command instead
+# If you're using yarn, use the following apart
 # RUN yarn build
 
 # Expose the port Next.js runs on
 EXPOSE 3000
 
-# Command to run the application
-CMD ["npm", "start"]
+# Command to run the application, listening on Cloud Run's dynamic port
+CMD ["sh", "-c", "npm start -p $PORT"]
 # If you're using yarn, use the following command instead
-# CMD ["yarn", "start"]
+# CMD ["sh", "-c", "yarn start -p $PORT"]
