@@ -1,4 +1,4 @@
-# Use the official lightweight Node.js 16 image.
+# Use the official lightweight Node.js 18 image.
 # https://hub.docker.com/_/node
 FROM node:18-alpine
 
@@ -7,7 +7,7 @@ WORKDIR /src
 
 # Copy the package.json and package-lock.json (or yarn.lock) files
 COPY package*.json ./
-# If you're using yarn instead of npm, copy the yarn.lock file
+# If you're using yarn, copy the yarn.lock file instead
 # COPY package.json yarn.lock ./
 
 # Install dependencies
@@ -20,13 +20,13 @@ COPY . .
 
 # Build the application
 RUN npm run build
-# If you're using yarn, use the following apart
+# If you're using yarn, use the following command instead
 # RUN yarn build
 
-# Expose the port Next.js runs on
+# Expose the port for documentation purposes, Cloud Run does not use this
 EXPOSE 8080
 
-# Command to run the application, listening on Cloud Run's dynamic port
+# Ensure the application listens on the correct port by using the $PORT environment variable
 CMD ["sh", "-c", "npm start -p $PORT"]
-# If you're using yarn, use the following command instead
+# If you're using yarn, change it to:
 # CMD ["sh", "-c", "yarn start -p $PORT"]
