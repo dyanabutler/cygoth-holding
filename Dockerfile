@@ -24,7 +24,7 @@ RUN npm run build
 # RUN yarn build
 
 # Expose the port Next.js runs on
-EXPOSE 3000
+EXPOSE 8080
 
 # Command to run the application, listening on Cloud Run's dynamic port
 CMD ["sh", "-c", "npm start -p $PORT"]
