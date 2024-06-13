@@ -10,7 +10,7 @@ type ButtonProps = {
 
 const Button: React.FC<ButtonProps> = ({ 
   link, 
-  label = "",  // Set default values here
+  label = "Become an Og in Discord",  // Set default values here
   actionLabel = "" 
 }) => {
   return (
@@ -19,8 +19,9 @@ const Button: React.FC<ButtonProps> = ({
         <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-600 to-rose-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
         <a href={link} className="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
           <span className="font-king text-indigo-400 group-hover:text-gray-100 transition duration-200">{actionLabel}</span>
+        
         </a>
-        <text> 100/100 Seats Available </text>
+        <text> --- 100/100 Seats Available </text>
       </div>
     </div>
   );
