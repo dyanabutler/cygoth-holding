@@ -3,7 +3,8 @@
 FROM node:16-alpine
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /src
+EXPOSE 8080
 
 # Copy the package.json and package-lock.json (or yarn.lock) files
 COPY package*.json ./
