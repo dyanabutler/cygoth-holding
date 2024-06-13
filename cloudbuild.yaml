@@ -26,7 +26,7 @@ steps:
 
 options:
   logging: CLOUD_LOGGING_ONLY
-  region: 'us-central1'
+  
 
 timeout: 1200s
 
