@@ -24,7 +24,7 @@ RUN npm run build
 # RUN yarn build
 
 # Expose the port for documentation purposes, Cloud Run does not use this
-EXPOSE 8080
+#EXPOSE 8080
 
 # Ensure the application listens on the correct port by using the $PORT environment variable
 CMD ["sh", "-c", "npm start -p $PORT"]
